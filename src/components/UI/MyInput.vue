@@ -2,7 +2,11 @@
 export default {
   name: "my-input",
   props: {
-    value: [String, Number]
+    value: [String, Number],
+    placeholder: {
+      type: String,
+
+    }
   },
   methods :{
     updateInput(e) {
@@ -13,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <input type="text" :value="value" @input="updateInput"/>
+  <input type="text" :value="value" @input="updateInput" :placeholder="placeholder"/>
   <slot></slot>
 </template>
 

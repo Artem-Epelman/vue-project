@@ -6,11 +6,15 @@
         v-model:value="post.title"
         @input="post.title=$event.target.value"
         type="text"
+        placeholder="Enter title..."
+
+
     />
     <my-input
         v-model:value="post.body"
         @input="post.body=$event.target.value"
         type="text"
+        placeholder="Enter body text..."
     />
 
     <my-button
@@ -39,7 +43,7 @@ import MyInput from "@/components/UI/MyInput.vue";
        post: {
          title:'',
          body:'',
-       }
+       },
      }
    },
    methods: {

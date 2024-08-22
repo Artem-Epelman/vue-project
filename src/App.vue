@@ -4,6 +4,7 @@
     <my-button
         @click="showDialog" style="margin: 10px 0"
     >Создать пост</my-button>
+    <input type="text" v-model.trim="modificatorValue">
 
     <my-dialog v-model:show="dialogVisible">
     <post-form @create="createPost"/>
@@ -34,6 +35,7 @@ export default {
         {id:3, title:'Пост о JS 3', body:'Тело поста 3'}
       ],
       dialogVisible: false,
+      modificatorValue:"",
     }
   },
   methods: {
